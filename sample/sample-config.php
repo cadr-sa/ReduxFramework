@@ -1147,16 +1147,16 @@ function setup_framework_options(){
                                         'options' => array('1' => 'Opt 1','2' => 'Opt 2','3' => 'Opt 3'),//Must provide key => value pairs for radio options
                                         'default' => '2'
                                         ),			
-//                                array(
-//                                        'id'=>'select-post-typeg',
-//                                        'type' => 'select',
-//                                        'data' => 'post_type',
-//                                        'title' => __('Post Type Select Option', 'redux-framework'), 
-//                                        'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
-//                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework'),
-//                                        ),	
                                 array(
-                                        'id'=>'g',
+                                        'id'=>'select-post-typeg',
+                                        'type' => 'select',
+                                        'data' => 'post_type',
+                                        'title' => __('Post Type Select Option', 'redux-framework'), 
+                                        'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
+                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework'),
+                                        ),	
+                                array(
+                                        'id'=>'17g',
                                         'type' => 'date',
                                         'title' => __('Date Option', 'redux-framework'), 
                                         'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
