@@ -1120,15 +1120,58 @@ function setup_framework_options(){
 				'desc' => __('This is created with a callback function, so anything goes in this field. Make sure to define the function though.', 'redux-framework'),
 				'callback' => 'my_custom_field'
 				),
-			/*
+			
 			array(
 				'id'=>"group",
 				'type' => 'group',//doesnt need to be called for callback fields
 				'title' => __('Group', 'redux-framework'), 
 				'subtitle' => __('Group any items together.', 'redux-framework'),
+                                'groupname' => __('Group', 'redux-framework'), // name of the group
 				'desc' => __('No limit as to what you can group. Just don\'t try to group a group.', 'redux-framework'),
-				),			
-				*/
+                                'subfields' => array(
+                                array(
+                                        'id'=>'test_first',
+                                        'type' => 'button_set',
+                                        'title' => __('Button Set Option', 'redux-framework'), 
+                                        'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
+                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework'),
+                                        'options' => array('1' => 'Opt 1','2' => 'Opt 2','3' => 'Opt 3'),//Must provide key => value pairs for radio options
+                                        'default' => '2'
+                                        ),
+                                array(
+                                        'id'=>'test_two',
+                                        'type' => 'button_set',
+                                        'title' => __('Button Set Option', 'redux-framework'), 
+                                        'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
+                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework'),
+                                        'options' => array('1' => 'Opt 1','2' => 'Opt 2','3' => 'Opt 3'),//Must provide key => value pairs for radio options
+                                        'default' => '2'
+                                        ),			
+//                                array(
+//                                        'id'=>'select-post-typeg',
+//                                        'type' => 'select',
+//                                        'data' => 'post_type',
+//                                        'title' => __('Post Type Select Option', 'redux-framework'), 
+//                                        'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
+//                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework'),
+//                                        ),	
+                                array(
+                                        'id'=>'g',
+                                        'type' => 'date',
+                                        'title' => __('Date Option', 'redux-framework'), 
+                                        'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
+                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework')
+                                        ),
+                                array(
+                                        'id'=>'group_text',
+                                        'type' => 'text',
+                                        'title' => __('Text', 'redux-framework'), 
+                                        'subtitle' => __('No validation can be done on this field type', 'redux-framework'),
+                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework')
+                                        ),    
+                                ),
+                            ),			
+				
 			)
 
 		);    

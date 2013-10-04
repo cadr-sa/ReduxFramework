@@ -45,7 +45,7 @@ a{outline:0 !important}
 .redux-group-tab .form-table tr:last-child{border-bottom:none}
 .redux-group-tab .form-table tr th,.redux-group-tab .form-table tr td{p2adding:20px 20px 40px 20px;color:#333}
 .redux-group-tab .form-table tr th{font-weight:bold;font-size:1.1em;width:30%}
-.redux-group-tab .form-table tr th span:first-child{font-weight:normal;display:block;color:#666}
+.redux-group-tab .form-table tr th span:first-child,.redux-group-tab .form-table tr td span.description{font-weight:normal;display:block;color:#666}
 .redux-group-tab .form-table tr td .redux-th-warning{font-size:1em;color:#c09853;font-weight:normal;display:block}
 .redux-group-tab .form-table tr td .redux-field-warning{border-color:#c09853}
 .redux-group-tab .form-table tr td .redux-th-error{font-size:1em;color:#b94a48;font-weight:normal;display:block}
@@ -114,8 +114,8 @@ label.radio,label.multicheck{position:relative}
 #redux-main .of-radio-tile-img:hover{opacity:.8}
 #redux-main .of-border-width{width:70px;float:left}
 #redux-main .of-border-style{width:95px;float:left}
-#redux-main .group{display:none;padding-bottom:20px}
-#redux-main .group h2{display:none;border-bottom:3px solid #e7e7e7}
+#redux-main .group{/*display:none;padding-bottom:20px*/}
+#redux-main .group h2{/*display:none;*/border-bottom:3px solid #e7e7e7}
 #redux-main input:focus,#redux-main select:focus,#redux-main textarea:focus{background:#fff}
 #redux-main .hide{display:none}
 #redux-main input.button-primary{border-color:#21759b;border-bottom-color:#1e6a8d;-webkit-box-shadow:inset 0 1px 0 rgba(120,200,230,0.5);box-shadow:inset 0 1px 0 rgba(120,200,230,0.5)}
