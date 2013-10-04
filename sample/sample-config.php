@@ -337,7 +337,14 @@ function setup_framework_options(){
 				'title' => __('Media No Preview', 'redux-framework'),
 				'desc'=> __('This represents the minimalistic view. It does not have the preview box or the display URL in an input box. ', 'redux-framework'),
 				'subtitle' => __('Upload any media using the Wordpress native uploader', 'redux-framework'),
-				),								
+				),
+                        array(
+                                'id' => 'ids',
+                                'type' => 'gallery',
+                                'title' => __('Add/Edit Gallery', 'so-panels'),
+                                'subtitle' => __('Create a new Gallery by selecting existing or uploading new images using the Wordpress native uploader', 'so-panels'),
+                                'desc' => __('This is the description field, again good for additional info.', 'redux-framework'),
+                                ),
 		/*
 			array(
 				'id'=>'gallery',
