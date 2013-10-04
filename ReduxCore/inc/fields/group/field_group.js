@@ -73,11 +73,6 @@
                 }
             });
 
-            $(newSlide).find('.screenshot').removeAttr('style');
-            $(newSlide).find('.screenshot').addClass('hide');
-            $(newSlide).find('.screenshot a').attr('href', '');
-            $(newSlide).find('.remove-image').addClass('hide');
-            $(newSlide).find('.redux-groups-image').attr('src', '').removeAttr('id');
             $(newSlide).find('h3').text('').append('<span class="redux-groups-header">New Group</span><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>');
             $(this).prev().append(newSlide);
         });
