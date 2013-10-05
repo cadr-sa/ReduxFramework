@@ -1129,6 +1129,92 @@ function setup_framework_options(){
                                 'groupname' => __('Group', 'redux-framework'), // name of the group
 				'desc' => __('No limit as to what you can group. Just don\'t try to group a group.', 'redux-framework'),
                                 'subfields' => array(
+                                 array(
+                                        'id'=>'tracking-code-group',
+                                        'type' => 'textarea',
+                                        'title' => __('Tracking Code', 'redux-framework'), 
+                                        'subtitle' => __('Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'redux-framework'),
+                                        'validate' => 'js',
+                                        'desc' => 'Validate that it\'s javascript!',
+				),
+                                 array(
+                                        'id'=>'footer-text-group',
+                                        'type' => 'editor',
+                                        'title' => __('Footer Text', 'redux-framework'), 
+                                        'subtitle' => __('You can use the following shortcodes in your footer text: [wp-url] [site-url] [theme-url] [login-url] [logout-url] [site-title] [site-tagline] [current-year]', 'redux-framework'),
+                                        'default' => 'Powered by [wp-url]. Built on the [theme-url].',
+				),
+                                 array(
+                                        'id'=>'layout-group',
+                                        'type' => 'image_select',
+                                        'compiler'=>true,
+                                        'title' => __('Main Layout', 'redux-framework'), 
+                                        'subtitle' => __('Select main content and sidebar alignment. Choose between 1, 2 or 3 column layout.', 'redux-framework'),
+                                        'options' => array(
+                                                        '1' => array('alt' => '1 Column', 'img' => REDUX_URL.'assets/img/1col.png'),
+                                                        '2' => array('alt' => '2 Column Left', 'img' => REDUX_URL.'assets/img/2cl.png'),
+                                                        '3' => array('alt' => '2 Column Right', 'img' => REDUX_URL.'assets/img/2cr.png'),
+                                                        '4' => array('alt' => '3 Column Middle', 'img' => REDUX_URL.'assets/img/3cm.png'),
+                                                        '5' => array('alt' => '3 Column Left', 'img' => REDUX_URL.'assets/img/3cl.png'),
+                                                        '6' => array('alt' => '3 Column Right', 'img' => REDUX_URL.'assets/img/3cr.png')
+                                                ),
+                                        'default' => '2'
+				),
+                                 array(
+                                        'id'=>'media-group',
+                                        'type' => 'media', 
+                                        'url'=> true,
+                                        'title' => __('Media No URL', 'redux-framework'),
+                                        'desc'=> __('This represents the minimalistic view. It does not have the preview box or the display URL in an input box. ', 'redux-framework'),
+                                        'subtitle' => __('Upload any media using the Wordpress native uploader', 'redux-framework'),
+				),
+                                array(
+                                        'id'=>'typography-group',
+                                        'type' => 'typography', 
+                                        'title' => __('Typography', 'redux-framework'),
+                                        'compiler'=>true,
+                                        'google'=>false, // Disable google fonts. Won't work if you haven't defined your google api key
+                                        //'font-style'=>false, // Includes font-style and weight. Can use font-style or font-weight to declare
+                                        'subsets'=>false, // Only appears if google is true and subsets not set to false
+                                        //'font-size'=>false,
+                                        //'line-height'=>false,
+                                        //'word-spacing'=>true, // Defaults to false
+                                        //'letter-spacing'=>true, // Defaults to false
+                                        //'color'=>false,
+                                        //'preview'=>false, // Disable the previewer
+                                        'units'=>'em',				
+                                        'subtitle'=> __('Typography option with each property can be called individually.', 'redux-framework'),
+                                        'default'=> array(
+                                                'color'=>"#333", 
+                                                'style'=>'700', 
+                                                'family'=>'Courier, monospace', 
+                                                'size'=>33, 
+                                                'height'=>'40'),
+				),	
+                                array(
+                                        'id' => 'gallery-group',
+                                        'type' => 'gallery',
+                                        'title' => __('Add/Edit Gallery', 'so-panels'),
+                                        'subtitle' => __('Create a new Gallery by selecting existing or uploading new images using the Wordpress native uploader', 'so-panels'),
+                                        'desc' => __('This is the description field, again good for additional info.', 'redux-framework'),
+                                ),
+//                                array(
+//                                        'id'=>'slider-group',
+//                                        'type' => 'slider', 
+//                                        'title' => __('JQuery UI Slider Example 1', 'redux-framework'),
+//                                        'desc'=> __('JQuery UI slider description. Min: 1, max: 500, step: 3, default value: 45', 'redux-framework'),
+//                                        "default" 		=> "45",
+//                                        "min" 		=> "1",
+//                                        "step"		=> "3",
+//                                        "max" 		=> "500",
+//				),
+                                array(
+                                        'id'=>'switch-on-group',
+                                        'type' => 'switch', 
+                                        'title' => __('Switch On', 'redux-framework'),
+                                        'subtitle'=> __('Look, it\'s on!', 'redux-framework'),
+                                        "default" 		=> 1,
+				),
                                 array(
                                         'id'=>'test_first',
                                         'type' => 'button_set',

@@ -74,21 +74,24 @@ if (!class_exists('ReduxFramework_group')) {
 
             echo '<div class="redux-group">';
             echo '<div id="redux-groups-accordion">';
-
             $x = 0;
 
             $groups = $this->value;
             foreach ($groups as $group) {
 
-                echo '<div class="redux-groups-accordion-group"><h3><span class="redux-groups-header">' . $group['slide_title'] . '</span></h3><div>';
-
+                echo '<div class="redux-groups-accordion-group"><h3><span class="redux-groups-header">' . $group['slide_title'] . '</span></h3>';
+                echo '<div>';//according content open
+                
+                echo '<table style="margin-top: 0;" class="redux-groups-accordion redux-group form-table no-border">';
+                
                 echo '<h4>' . __('Group Title', 'redux-framework') . '</h4>';
                 echo '<fieldset><input type="text" id="' . $this->field['id'] . '-slide_title_' . $x . '" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][' . $x . '][slide_title]" value="' . esc_attr($group['slide_title']) . '" class="regular-text slide-title" /></fieldset>';
                 echo '<input type="hidden" class="slide-sort" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][' . $x . '][slide_sort]" id="' . $this->field['id'] . '-slide_sort_' . $x . '" value="' . $group['slide_sort'] . '" />';
                 foreach ($this->field['subfields'] as $field) {
                     //we will enqueue all CSS/JS for sub fields if it wasn't enqueued
                     $this->enqueue_dependencies($field['type']);
-
+                    
+                    echo '<tr><td>';
                     $field['class'] .= " group";
 
                     if (!empty($field['title']))
@@ -102,8 +105,10 @@ if (!class_exists('ReduxFramework_group')) {
                     $_field = $this->support_multi(ob_get_contents(), $field, $x);
                     ob_end_clean();
                     echo $_field;
+                    
+                    echo '</td></tr>';
                 }
-
+                echo '</table>';
                 echo '<a href="javascript:void(0);" class="button deletion redux-groups-remove">' . __('Delete', 'redux-framework').' '.$this->field['groupname']. '</a>';
                 echo '</div></div>';
                 $x++;
